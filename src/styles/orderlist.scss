@@ -1,0 +1,32 @@
+.orderlist{
+    width: 100%;
+    min-height: 80vh;
+    background-color: #FFFFFF;
+    padding: 10px;
+
+    >h2{
+        margin-bottom:5px;
+        font-family: Fugaz-One;
+    }
+    >table{
+        border-collapse: collapse;
+        width: 100%;
+        text-align: center;
+        tr{
+            background-color: white;
+            &:hover{
+                background-color: #ddd;
+            }
+            >th, >td{
+                border-bottom: 1px solid rgb(204, 201, 201);
+                padding: 10px;
+                text-align: left;
+               
+            }
+
+            &:first-child>th{
+                color: #645E5E;
+            }
+        }
+    }
+}

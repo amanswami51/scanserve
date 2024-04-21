@@ -1,0 +1,67 @@
+.addNewItemModal{
+    background: rgb(57,201,204);
+    background: linear-gradient(0deg, rgba(57,201,204,1) 0%, rgba(245,206,122,1) 100%);
+    padding: 0px 15px;
+    width: 50%;
+    height: 30pc;
+    display: none;
+    justify-content: center;
+    flex-direction: column;
+
+    >h2{
+        margin-bottom: 10px;
+    }
+    >form{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        >input{
+            margin: 5px 0px;
+            font-size: 18px;
+            padding: 0px 15px;
+            height: 35px;
+            border: none;
+            border-radius: 10px;
+            outline: none;
+        }
+        >textarea{
+            margin: 5px 0px;
+            font-size: 18px;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 10px;
+            outline: none;
+        }
+
+        >p{
+            font-size: 18px;
+            padding: 10px;
+            height: 40px;
+            font-weight: bolder;
+            border: none;
+            border-radius: 10px;
+            outline: none;
+            font-family: math;
+            max-width: 80px;
+            cursor: pointer;
+            background-color: gray;
+            color: white;
+            &:hover{
+                background-color: orange;
+            }
+        }
+
+        >svg{
+            position: absolute;
+            font-size: 30px;
+            top:0;
+            right: 0;
+        }
+        
+    }
+}
+
+.addmenuDisplay{
+    display: flex;
+}

@@ -1,0 +1,24 @@
+.dashboard{
+    display: flex;
+    background-color: #F6F0F8;
+
+    >.sidebar{
+        flex:0.1;
+        position:sticky;
+        left:0;
+        top:0;
+    }
+
+    .dashboard__right{
+        flex:0.9;
+
+        >.topnavbar{
+            position:sticky;
+            top:0;
+        }
+
+        .dashboard__orderlist{
+            padding: 15px 25px;
+        }
+    }
+}

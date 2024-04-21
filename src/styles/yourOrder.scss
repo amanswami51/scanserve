@@ -1,0 +1,63 @@
+.yourorder{
+    min-height: 100vh;
+    background-color: #ecf7f7;
+    padding: 20px 15px;
+
+    >.yourorder_isEmpty{
+        min-height: 80vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        >img{
+            width: 120px;
+            margin-bottom: 10px;
+        }
+        >a{
+            margin-top: 10px;
+            text-decoration: none;
+            color: #4f4949;
+            font-weight: bold;
+            font-size: 20px;
+        }
+    }
+
+    >.orders{
+        min-height: 88vh;
+        >.order{
+            background-color: #dbc090;
+            padding: 10px;
+            margin: 15px 0px;
+            border-radius: 15px;
+    
+            >p{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+            }
+    
+            >.items{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                margin: 10px 0px;
+                >img{
+                    width: 230px;
+                }
+                >div{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    height: 130px;
+                }
+            }
+        }
+    }
+    
+    >.footerUserMode{
+        
+    }
+
+
+}

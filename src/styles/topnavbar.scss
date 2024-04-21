@@ -1,0 +1,87 @@
+.topnavbar{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #FFFFFF;
+    padding: 10px 20px;
+    border-bottom: 1px solid rgb(181, 178, 178);
+
+    >div:first-child{
+        display:flex;
+        align-items: center;
+        >h1{
+            margin-left: 2px;
+        }
+    }
+    >div:nth-child(2){
+        display: flex;
+        justify-content: space-between;
+        width: 12pc;
+        align-items: center;
+
+        .topnavbar__moon__belliconDiv{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 6pc;
+            svg{
+                font-size: 28px;
+            }
+            svg:nth-child(2){
+                font-size:35px;
+            }
+        }
+
+        .topnavbar__usericons{
+            display: flex;
+            align-items: center;
+            svg{
+                font-size: 28px;
+            }
+            svg:nth-child(2){
+                font-size: 18px;
+            }
+
+            .userInfo{
+                width: 150px;
+                height: 150px;
+                position: absolute;
+                top: 58px;
+                right: 10px;
+                background-color: rgb(232, 225, 213);
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                padding: 8px;
+
+                >button{
+                    font-weight: bolder;
+                    padding: 6px 0px;
+                    border-radius: 5px;
+                    border: none;
+                    outline: none;
+                    
+                    &:hover{
+                        background-color: orange;
+                        color: white;
+                    }
+                }
+               
+            }
+
+            .userInfoClose{
+                display: none;
+            }
+        }
+    }
+
+    >span{
+        background-color: red;
+        width: 8px;
+        height: 8px;
+        position: absolute;
+        right: 120px;
+        border-radius: 10px;
+        top: 17px;
+    }
+}

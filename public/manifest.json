@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Scan serve",
+  "name": "A New Self Ordering System",
   "icons": [
     {
       "src": "favicon.ico",

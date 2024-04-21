@@ -1,0 +1,52 @@
+.manageQRCode{
+    display: flex;
+
+    >.sidebar{
+        flex:0.1;
+    }
+    >.manageQRCode__right{
+        flex:0.9;
+
+        >.manageQRCode__body{
+            padding: 10px 15px;
+
+            >.form{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                margin-bottom: 10px;
+                >input{
+                    width: 20%;
+                    padding: 5px 10px;
+                    border-radius: 10px;
+                    outline: none;
+                    border: none;
+                    margin-bottom: 2px;
+                    background-color: rgb(243, 219, 243);
+                    color: black;
+                }
+            }
+            >.qrimages{
+                border: 2px solid violet;
+                border-radius: 10px;
+                >img{
+                    width: 150px;
+                }
+            }
+        }
+    }
+}
+
+.manageQRCode__buttons{
+    border: none;
+    outline: none;
+    background-color: violet;
+    padding: 6px 10px;
+    border-radius: 10px;
+    margin: 5px 0px;
+
+    &:hover{
+        background-color: blueviolet;
+    }
+}

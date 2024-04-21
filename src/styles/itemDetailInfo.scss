@@ -1,0 +1,88 @@
+.itemDetailInfo{
+    background-color: #462B9C;
+    min-height: 100vh;
+
+    >.itemDetailInfo__firstSection{
+        height: 46vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items:center;
+        >svg{
+            color: white;
+            position: absolute;
+            top: 25px;
+            left: 10px;
+            font-size: 40px;
+        }
+        >img{
+            width: 410px;
+            margin-top: 40px;
+            border-radius: 18px;
+        }
+    }
+
+    >.itemDetailInfo__secondSection{
+        background-color: white;
+        border-top-left-radius: 25px;
+        padding: 15px;
+        height: 54vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        >div:first-child{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 25px;
+            >P{
+                display: flex;
+                align-items: center;
+                background-color: #462B9C;
+                padding: 10px 15px;
+                border-radius: 20px;
+                color: white;
+                font-weight: bold;
+                svg{
+                    color: #C9AA05;
+                    margin-right: 5px;
+                }
+            }
+            >h3{
+                color: #C9AA05;
+            }
+        }
+        >div:nth-child(2){
+            display: flex;
+            justify-content: space-between;
+            >h3{
+                font-size: 25px;
+            }
+            >p{
+                display: flex;
+                justify-content: space-between;
+                width: 80px;
+                font-size: 20px;
+                color: #462B9C;
+            }
+        }
+        >p{
+            color: gray;
+            font-weight: bold;
+        }
+
+        >button{
+            margin: 0px auto;
+            display: block;
+            background-color: #462B9C;
+            color: white;
+            font-weight: bold;
+            font-size: 25px;
+            padding: 18px 90px;
+            border-radius: 25px;
+            border: none;
+            outline: none;
+        }
+    }
+}

@@ -1,0 +1,90 @@
+.cart{
+    min-height: 100vh;
+    background-color: #ecf7f7;
+    padding: 20px 15px;
+
+    >.cart_isEmpty{
+        min-height: 80vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        >img{
+            width: 120px;
+            margin-bottom: 10px;
+        }
+        >a{
+            margin-top: 10px;
+            text-decoration: none;
+            color: #4f4949;
+            font-weight: bold;
+            font-size: 20px;
+        }
+    }
+
+    >.cart__items{
+        min-height: 80vh;
+        >div{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin: 20px 0px;
+            >div{
+                display: flex;
+                flex-direction: row;
+                >span{
+                    background-color: #dadada;
+                    padding: 30px 5px;
+                    border-radius: 22px;
+                    >img{
+                        width: 125px;
+                        height: 100px;
+                    }
+                }
+                >div{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    margin-left: 10px;
+                    >div{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: center;
+                    }
+                }
+            }
+            >svg{
+                color: red;
+                font-size: 20px;
+            }
+        }
+    }
+    >.price_information{
+        >div{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin: 10px 0px;
+            color: gray;
+        }
+    }
+    >.order__button{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        >button{
+            background-color: #462B9C;
+            color: white;
+            font-weight: bold;
+            font-size: 30px;
+            padding: 18px 90px;
+            border-radius: 25px;
+            margin-bottom: 10px;
+            border: none;
+            outline: none;
+        }
+    }
+}

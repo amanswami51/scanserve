@@ -1,0 +1,32 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+//common
+@import 'login';
+@import 'topnavbar';
+@import 'sidebar';
+
+//admin/dashboard
+@import 'dashboard';
+@import "orderlist";
+@import "manageQRCode";
+
+//admin/chef
+
+//admin/addmenu
+@import 'addmenu';
+@import 'card';
+@import 'addNewItemModal';
+
+
+//user mode
+@import "menuFirstPage";
+@import "foodmenu";
+@import "itemDetailInfo";
+@import "cart";
+@import "yourOrder";

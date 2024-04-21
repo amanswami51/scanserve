@@ -1,0 +1,44 @@
+.addmenu{
+    display: flex;
+    flex-direction: row;
+    background-color: #F6F0F8;
+
+    >.sidebar{
+        flex:0.1;
+        position:sticky;
+        left:0;
+        top:0;
+    }
+
+    >div:nth-child(2){
+        flex:0.9;
+
+        >.topnavbar{
+            position: sticky;
+            top:0;
+        }
+        .addmenu__cardsDiv{
+         display: grid; 
+         grid-template-columns: auto auto auto ;  
+         grid-gap: 10px;          
+         padding: 10px;
+         justify-content: space-evenly;
+
+         .addmenu__addbutton{
+            font-size: 70px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+         }
+        }
+    }
+
+
+    >.addNewItemModal{
+        position:fixed;
+        top: 4pc;
+        left:20pc;
+    }
+
+    
+}
