@@ -36,7 +36,7 @@ const Card = ({x, getItems}) => {
         </div>
         <div>
             <h3>{x.name}</h3>
-            <h4>${x.price}</h4>
+            <h4>&#8377;{x.price}</h4>
             <div>
                 <button onClick={openUpdateModalHandler}>Edit</button>
                 <button onClick={()=>{deleteItems(x._id)}}>Delete</button>

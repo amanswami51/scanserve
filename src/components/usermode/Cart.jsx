@@ -10,8 +10,11 @@ import { decreementCartItem, getTotals, increementCartItem, removeCartItems } fr
 import { PlacedOrderApiCall } from '../../middleware/PlacedOrderFun';
 import { setYourOrder } from '../../redux/YourOrderReducer';
 import scanservelogo from "../../extra/scanservelogo.png";
+import { createOrderAPICall, getRazorpayKeyAPICall, paymentVerificationAPICall } from '../../middleware/PaymentsFun';
+
 
 const Cart = () =>{
+
     const {CartItems, cartSubTotalAmount} = useSelector((state)=>state.cartItems)
 
     const dispatch = useDispatch();
@@ -25,14 +28,44 @@ const Cart = () =>{
     //placed new order
     const navigate = useNavigate();
     const placeOrderHandler = async(TotalPrice)=>{
-        const response = await PlacedOrderApiCall(TotalPrice);
-        if(response.success){
-            dispatch(setYourOrder(response.cartItemIsSaveOrNot));
-            toast.success("Item order successfully");
-            navigate('/user/yourorder')
-        }else{
-            toast.success('Your order is reject');
-        }
+        const response1 = await createOrderAPICall(TotalPrice);
+        const key = await getRazorpayKeyAPICall();
+
+        var options = {
+            key: key,
+            amount: response1.order.amount,
+            currency: "INR",
+            name: "Scanserve", 
+            description: "It is a self ordering system by using QR code",
+            image: scanservelogo,
+            order_id: response1.order.id, 
+            handler: async function (response){
+                const body = {...response,};
+                const response3 = await paymentVerificationAPICall(body);
+                if(response3.success){
+                    const response2 = await PlacedOrderApiCall(TotalPrice);
+                    dispatch(setYourOrder(response2.cartItemIsSaveOrNot));
+                    toast.success("Item order successfully");
+                    navigate('/user/yourorder')
+                }
+                else{
+                    toast.error('Your order is reject');
+                }
+            },
+            prefill: {
+                "name": "Gaurav Kumar",
+                "email": "gaurav.kumar@example.com",
+                "contact": "9000090000" 
+            },
+            notes:{
+                "address": "Razorpay Corporate Office"
+            },
+            theme: {
+                "color": "#3399cc"
+            }
+        };
+        const razor = new window.Razorpay(options);
+        razor.open();
     }
 
   return (
@@ -113,5 +146,7 @@ const PriceInfo = ({tag, price})=>{
         </div>
     )
 }
+
+
 
 export default Cart

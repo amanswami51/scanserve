@@ -10,4 +10,9 @@ const Admin = () =>{
     }
 }
 
+//backend API link
+const hostname = "http://localhost:5000";
+// const hostname = "https://scanserveapi-production.up.railway.app";
+
 export default Admin;
+export {hostname};

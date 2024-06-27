@@ -1,5 +1,4 @@
-const hostname = "https://scanserveapi-production.up.railway.app";
-// const hostname = "http://localhost:5000"
+import {hostname} from "../components/Admin";
 
 const PlacedOrderApiCall = async(TotalPrice)=>{
     const response = await fetch(`${hostname}/api/customer/orders`, {
@@ -15,9 +14,10 @@ const PlacedOrderApiCall = async(TotalPrice)=>{
     return responseInJson;
 }
 
-const GetOrderApiCall = async()=>{
-    const response = await fetch(`${hostname}/api/customer/orders`,{
-        methos:"GET",
+//Get current orders
+const CurrentOrderApiCall = async()=>{
+    const response = await fetch(`${hostname}/api/admin/getOrders/current`,{
+        method:"GET",
         headers:{
             'Content-Type':'application/json',
             'token':localStorage.getItem('token'),
@@ -28,4 +28,19 @@ const GetOrderApiCall = async()=>{
     return responseInJson;
 }
 
-export {PlacedOrderApiCall, GetOrderApiCall};
+//Get previous orders
+const PreviousOrderApiCall = async(dateInterval)=>{
+    const response = await fetch(`${hostname}/api/admin/getOrders/previous`,{
+        method:"POST",
+        headers:{
+            'Content-Type':'application/json',
+            'token':localStorage.getItem('token'),
+        }, 
+        body:JSON.stringify(dateInterval),
+    })
+
+    const responseInJson = await response.json();
+    return responseInJson;
+}
+
+export {PlacedOrderApiCall, CurrentOrderApiCall, PreviousOrderApiCall};

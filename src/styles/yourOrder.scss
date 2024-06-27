@@ -55,8 +55,17 @@
         }
     }
     
-    >.footerUserMode{
-        
+    >button{
+        border: none;
+        outline: none;
+        font-size: 16px;
+        padding: 10px;
+        border-radius: 14px;
+        font-weight: bold;
+        background-color: orange;
+        &:hover{
+            background-color: aqua;
+        }
     }
 
 

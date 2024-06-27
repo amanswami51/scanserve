@@ -5,7 +5,6 @@ import {Link} from 'react-router-dom';
 import { MdOutlineQrCodeScanner } from "react-icons/md";
 
 
-
 const Sidebar = () => {
   return (
     <div className='sidebar'>

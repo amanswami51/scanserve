@@ -1,5 +1,4 @@
-const hostname = "https://scanserveapi-production.up.railway.app";
-// const hostname = "http://localhost:5000"
+import {hostname} from "../components/Admin";
 
 const getItemsUserModeCall = async()=>{
     const response = await fetch(`${hostname}/api/customer/getitem`, {

@@ -12,6 +12,9 @@ import Cart from "./components/usermode/Cart";
 import MangeQRCode from "./components/dashboard/MangeQRCode";
 import Admin from "./components/Admin";
 import YourOrder from "./components/usermode/YourOrder";
+import OwnerLogin from "./components/owner/OwnerLogin";
+import Owner from "./components/owner/Owner";
+import OwnerControl from "./components/owner/OwnerControl";
 
 function App(){
   
@@ -32,7 +35,11 @@ function App(){
           <Route path="/user/itemdetailinfo" element={ <ItemDetailInfo /> } />
           <Route path="/user/cart" element={ <Cart /> } />
           <Route path="/user/yourorder" element={ <YourOrder /> } />
-          <Route path="*" element={<h1>404 Page Not Found</h1>}/>
+          <Route path="*" element={<h1>404 Page Not Found</h1>} />
+          <Route path="/owner/login" element={<OwnerLogin />} />
+          <Route path="/owner" element={<Owner />} >
+            <Route path="ownercontrol" element={<OwnerControl />} />
+          </Route>
         </Routes>
       </BrowserRouter>
     </div>

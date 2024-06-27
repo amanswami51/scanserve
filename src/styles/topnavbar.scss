@@ -16,23 +16,19 @@
     >div:nth-child(2){
         display: flex;
         justify-content: space-between;
-        width: 12pc;
         align-items: center;
-
-        .topnavbar__moon__belliconDiv{
+        width: 110px;
+        
+        .topnavbar__secondDiv_left{
             display: flex;
             justify-content: space-between;
             align-items: center;
-            width: 6pc;
-            svg{
+            >svg{
                 font-size: 28px;
-            }
-            svg:nth-child(2){
-                font-size:35px;
             }
         }
 
-        .topnavbar__usericons{
+        .topnavbar__secondDiv_right{
             display: flex;
             align-items: center;
             svg{
@@ -73,15 +69,5 @@
                 display: none;
             }
         }
-    }
-
-    >span{
-        background-color: red;
-        width: 8px;
-        height: 8px;
-        position: absolute;
-        right: 120px;
-        border-radius: 10px;
-        top: 17px;
     }
 }

@@ -2,14 +2,13 @@ import React, {useState } from 'react'
 import Sidebar from './Sidebar'
 import TopNavbar from './TopNavbar'
 import jsPDF from 'jspdf';
+import {hostname} from "../Admin";
 
 const MangeQRCode = () =>{
 
     const [totalQrCode, setTotalQRCode] = useState(1);
 
     const [qrcodeImgLink, setQRcodeImgLink] = useState([]);
-    // const hostname = "http://localhost:5000"
-    const hostname = "https://scanserveapi-production.up.railway.app";
     const QRcodeApiCall = async()=>{
         const res = await fetch(`${hostname}/api/qrcode`, {
             method:"GET",

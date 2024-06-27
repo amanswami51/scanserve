@@ -1,0 +1,47 @@
+.ownerLogin{
+    background-color: #3f4166;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    >form{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        background-color: #cab7cd;
+        padding: 10px 20px;
+        box-shadow: 2px 3px 5px #4e4949;
+
+        >h1{
+            margin:auto;
+            padding-bottom: 10px;
+        }
+
+        >input{
+            margin: 5px 0px;
+            font-size: 20px;
+            padding: 3px 15px;
+            height: 40px;
+            border: none;
+            border-radius: 10px;
+            outline: none;
+        }
+        >p{
+            margin-top: 5px;
+            font-size: 20px;
+            display: flex;
+            justify-content: flex-end;
+            >a{
+                color: #080566;
+                text-decoration: none;
+            }
+        }
+
+        >button{
+            font-size: 24px;
+            max-width: 110px;
+        }
+    }
+}

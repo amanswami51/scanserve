@@ -1,7 +1,6 @@
 import {storage} from '../firebase'
 import {uploadBytes, ref, getDownloadURL} from "firebase/storage";
-const hostname = "https://scanserveapi-production.up.railway.app";
-// const hostname = "http://localhost:5000"
+import {hostname} from "../components/Admin";
 
 const getItemsCall = async()=>{
     const response = await fetch(`${hostname}/api/admin/addmenu`, {

@@ -8,6 +8,11 @@ const YourOrder = () =>{
 
     const {yourOrder} = useSelector((state)=>state.YourOrder)
 
+    const clearOrderHistory = (e)=>{
+        localStorage.removeItem('yourorder');
+        window.location.reload();
+    }
+
   return (
     <div className='yourorder'>
         {
@@ -29,6 +34,7 @@ const YourOrder = () =>{
                         })
                     }
                 </div>
+                <button onClick={clearOrderHistory}>Clear Order History</button>
                 <FooterUserMode />
             </>
         }

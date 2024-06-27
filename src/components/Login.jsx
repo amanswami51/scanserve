@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
+import {hostname} from "./Admin";
 
 function Login(){
   //get data from form
@@ -9,9 +10,6 @@ function Login(){
     setText({...text, [e.target.name]:e.target.value})
   }
 
-  //After click on login page
-  // const hostname = "http://localhost:5000"
-  const hostname = "https://scanserveapi-production.up.railway.app";
   const navigate = useNavigate();
   const handleOnSubmit = async(e)=>{
     e.preventDefault();
